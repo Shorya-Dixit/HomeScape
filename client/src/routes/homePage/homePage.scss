@@ -1,0 +1,109 @@
+@import "../../responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
+.homePage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      @include lg{
+        padding-right: 50px;
+      }
+
+      @include md{
+        padding: 0;
+      }
+
+      @include sm{
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 55px;
+        font-weight: 300;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          font-family: "Damion", Arial, sans-serif;
+          font-size: 88px !important;
+          font-weight: 400;
+          @include lg{
+            font-size: 72px;
+          }
+        }
+        img{
+          width: 130px;
+        }
+
+        @include lg {
+          font-size: 40px;
+        }
+      }
+
+      .desc{
+        font-size: 20px;
+        font-weight: 300;
+        color: rgb(61, 57, 57);
+        @include sm{
+          display: none;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 32px;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 140%;
+      position: absolute;
+      right: -40;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+  }
+}
